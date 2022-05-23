@@ -8,6 +8,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Elaborazione el=new Elaborazione();
+        el.createEl();
+        Server server= new Server(1234);
     }
 }
