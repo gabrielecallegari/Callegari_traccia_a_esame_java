@@ -25,24 +25,22 @@ public class Elaborazione_Arraylist {
     }
     String all(){
         String msg="";
-        msg=gson.toJson(arr);
-        return "All: "+msg;
+        return gson.toJson(arr);
+
     }
 
     String moreExpensive(){
         arr.sort((Piatti p1, Piatti p2)->(int) (p2.costo-p1.costo));
-        return "More_expensive: "+gson.toJson(arr.get(0));
+        return gson.toJson(arr.get(0));
     }
 
     String sort_crescente(){
         arr.sort((Piatti p1, Piatti p2)->(int) (p1.costo-p2.costo));
-        String msg="Sort crescente: "+gson.toJson(arr);
-        return msg;
+        return gson.toJson(arr);
     }
     String sort_decrescente(){
         arr.sort((Piatti p1, Piatti p2)->(int) (p2.costo-p1.costo));
-        String msg="Sort decrescente: "+gson.toJson(arr);
-        return msg;
+        return gson.toJson(arr);
     }
 
 }
